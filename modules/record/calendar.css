@@ -1,0 +1,255 @@
+.page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: fit-content;
+}
+.page, .calendar-box-time {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 28px;
+}
+.calendar-box-client {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+.calendar {
+	position: relative;
+    overflow: hidden;
+    border: 10px solid white;
+    border-radius: 25px;
+    height: fit-content;
+    width: 321px;
+}
+.calendar-img {
+  background-image: url('/modules/record/image/background_0.jpg');
+  background-repeat: round;
+  width: 100%;
+  height: 160px;
+}
+
+.calendar-final-row {
+	height: 41px;
+}
+.calendar-box, .arrow-left, .arrow-right {
+  position: relative;
+}
+.calend-day-active, .calendar-button-arrow, input[type='checkbox'] {
+  cursor: pointer;
+}
+.calendar-table td{
+  padding: 15px;
+  text-align: center;
+}
+
+.client-input {
+  margin-bottom: 0px;
+}
+.dayoff-6 {
+  flex-basis: 72%;
+}
+.calend-day-default {
+  height: 37px;
+  width: 37px;
+  text-align: center;
+  margin: 2px;
+  padding: 5px 3px;
+  border: 1px;
+  border-radius: 59px;
+  border-style: hidden;
+  flex-basis: 14%;
+}
+.calend-day-active {
+  border: 1px black;
+  border-style: dashed;
+  border-radius: 48px;
+  background-color: while;
+}
+.calend-day-check {
+  background-color: #0d6efd;
+  border: 1px white;
+  color: white;
+}
+.day-show {
+  border-color: #000;
+}
+.day-none {
+  border-color: #fff;
+}
+.weekname {
+  color: lightgreey;
+}
+.calendar-filter {
+  text-align: center;
+  padding: 5px 5px;
+}
+.calendar-filter span {
+  font-size: 10pt;
+}
+.calendar-filter img {
+  width: 29px;
+}
+.form-check {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+
+
+/*input[type='checkbox']:checked {*/
+/*  background-color: while;*/
+/*}*/
+/*input[type=checkbox] {*/
+/*  width: 15px;*/
+/*  height: 15px;*/
+/*}*/
+
+/*input[type=checkbox]:checked+label::before {*/
+  /*content: "";*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  text-align: center;*/
+/*  height: 15px;*/
+/*  width: 15px;*/
+/*  left: 17px;*/
+/*  top: 8px;*/
+/*  background-color: #fff;*/
+/*  font-family: "Montserrat";*/
+/*  border-radius: 2px;*/
+/*  border: 1px solid rgb(0 0 0 / 100%);*/
+/*}*/
+
+/*input[type=checkbox]:checked+label::after {*/
+/*  content: url('/css/check2.svg');*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  left: 16px;*/
+/*  top: 6px;*/
+/*}*/
+
+
+
+.calendar h3{
+text-align:center;
+position:relative;
+top:80px;
+}
+.calendar {
+background:#FFF;
+margin:40px auto;
+}
+.service-items {
+	border-radius: 10px;
+    border: 1px solid #dddddd;
+}
+
+.service-item {
+	border-bottom: 1px solid #dddddd;
+}
+
+.service-item-start {
+	border: 1px solid #ddd;
+	border-radius: 10px 10px 0px 0px;
+}
+.service-item-middle {
+	border: 1px solid #ddd;
+    border-top: 0;
+}
+.service-item-end {
+	border: 1px solid #ddd;
+	border-radius: 0px 0px 10px 10px;
+    border-top: 0;
+}
+
+
+.bs-gold {
+	background: gold;
+}
+.bs-gold > a {
+	color: white;
+}
+
+/*==================================================
+* Эффект 1
+* ===============================================*/
+/*.effect1{*/
+/*-webkit-box-shadow: 0 10px 6px -6px #777;*/
+/*   -moz-box-shadow: 0 10px 6px -6px #777;*/
+/*        box-shadow: 0 10px 6px -6px #777;*/
+/*==================================================
+* Эффект 5
+* ===============================================*/
+/*.effect5*/
+/*{*/
+/*position: relative;*/
+/*}*/
+/*.effect5:before, .effect5:after*/
+/*{*/
+/*z-index: -1;*/
+/*position: absolute;*/
+/*content: "";*/
+/*bottom: 25px;*/
+/*left: 10px;*/
+/*width: 50%;*/
+/*top: 80%;*/
+/*max-width:300px;*/
+/*background: #777;*/
+/*-webkit-box-shadow: 0 35px 20px #777;*/
+/*-moz-box-shadow: 0 35px 20px #777;*/
+/*box-shadow: 0 35px 20px #777;*/
+/*-webkit-transform: rotate(-8deg);*/
+/*-moz-transform: rotate(-8deg);*/
+/*-o-transform: rotate(-8deg);*/
+/*-ms-transform: rotate(-8deg);*/
+/*transform: rotate(-8deg);*/
+/*}*/
+/*.effect5:after*/
+/*{*/
+/*-webkit-transform: rotate(8deg);*/
+/*-moz-transform: rotate(8deg);*/
+/*-o-transform: rotate(8deg);*/
+/*-ms-transform: rotate(8deg);*/
+/*transform: rotate(8deg);*/
+/*right: 10px;*/
+/*left: auto;*/
+/*}*/
+/*==================================================
+* Эффект 7
+* ===============================================*/
+/*.effect7*/
+/*{*/
+/*  position:relative;*/
+/*  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
+/*     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
+/*          box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
+/*}*/
+/*.effect7:before, .effect7:after*/
+/*{*/
+/*content:"";*/
+/*  position:absolute;*/
+/*  z-index:-1;*/
+/*  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);*/
+/*  -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);*/
+/*  box-shadow:0 0 20px rgba(0,0,0,0.8);*/
+/*  top:0;*/
+/*  bottom:0;*/
+/*  left:10px;*/
+/*  right:10px;*/
+/*  -moz-border-radius:100px / 10px;*/
+/*  border-radius:100px / 10px;*/
+/*}*/
+/*.effect7:after*/
+/*{*/
+/*right:10px;*/
+/*  left:auto;*/
+/*  -webkit-transform:skew(8deg) rotate(3deg);*/
+/*     -moz-transform:skew(8deg) rotate(3deg);*/
+/*      -ms-transform:skew(8deg) rotate(3deg);*/
+/*       -o-transform:skew(8deg) rotate(3deg);*/
+/*          transform:skew(8deg) rotate(3deg);*/
+/*}*/

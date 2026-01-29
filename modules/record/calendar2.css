@@ -1,0 +1,108 @@
+/* Анимация мерцания */
+@keyframes displayHide {
+   
+ from {
+    /*transform: rotate(0deg);*/
+    transform: translate(0,0);
+    opacity: 1;
+  }
+
+  to {
+    /*transform: rotate(-180deg);*/
+    transform: translate(-300px,0);
+    opacity: 0;
+  }   
+}
+
+@keyframes displayShow {
+   
+ from {
+    /*transform: rotate(-180deg);*/
+    transform: translate(-300px,0);
+    opacity: 0;
+  }
+
+  to {
+    /*transform: rotate(0deg);*/
+    transform: translate(0,0);
+    opacity: 1;
+  }   
+}
+
+.displayHide {
+	/*transform: rotate(-180deg);*/
+	transform: translate(-300px,0);
+	transform-origin: left top;
+    opacity: 0;
+    display: none;
+}
+.displayShow {
+	/*transform: rotate(0deg);*/
+	transform: translate(0,0);
+	transform-origin: left top;
+    opacity: 1;
+    display: flex;
+}
+.displayHideAnimation {
+	animation: 0.2s linear infinite displayHide;
+	animation-iteration-count: 1;
+	transform-origin: left top;
+}
+.displayShowAnimation {
+	animation: 0.2s linear infinite displayShow;
+	animation-iteration-count: 1;
+	transform-origin: left top;
+}
+
+
+
+
+.modal-calendar {
+	/*background-color: rgb(11 33 68 / 80%);*/
+}
+.calendar-wrapper {
+	padding: 0.5rem;
+	border: 1px solid #e4e4e4;
+    border-radius: 15px;
+    border-top: 0;
+    boder-radius-bottom: 15px;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+}
+	.calendar-head {
+		width: 100%;
+	}
+	.calendar-table {
+		/*display: flex;*/
+		flex-direction: column;
+		align-items: center;
+	}
+	.calendar-tableTr {
+		display: flex;
+		flex-direction:row;
+	}
+	.calendar-tableTd {
+	    height: 40px;
+	    width: 40px;
+	    border-radius: 6px;
+	    border: 2px solid white;
+	    padding: 10px;
+	    text-align: center;
+	    font: icon;
+	}
+	.active-day {
+		background-color: rgb(53 171 255/100%);
+		color: white;
+		font-weight: 600;
+	}
+	.passive-day {
+		/*background-color: rgb(235 234 234);*/
+		background: repeating-linear-gradient(-45deg, #ffffff 0 1px, #0000001a 1px 3px);
+    	color: #b2b2b2;
+	}
+	.selected-day {
+		background-color: gold;
+	}
+	.hidden-day {
+		background-color: rgb(255 255 255/100%);
+	}
