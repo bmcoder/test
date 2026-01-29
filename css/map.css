@@ -1,0 +1,32 @@
+.map {
+	padding: 10px;
+	background-color: rgba(255,255,255,0.5);
+	/*border: 1px solid #ddd;*/
+	/*border-radius: 15px;*/
+}
+.wrp {
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+.map-box { 
+	position: absolute;
+	top: 70px;
+	right: 20px; 
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #ddd;
+	z-index: 100;
+	width: 250px;
+	box-shadow: -1px -1px 24px 0px rgba(50, 50, 50, 0.5);
+}
+.map-box p {
+	font-size: 18px;
+}
+#map {
+	width: 100%; 
+	height: 350px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	overflow: hidden;
+}

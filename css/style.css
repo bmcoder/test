@@ -1,0 +1,996 @@
+:root {
+    --bs-modal-width: 500px; /* По умолчанию */
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+body {
+	 display: flex; 
+	 min-height: 100vh; 
+	 flex-direction: column; 
+}
+main {
+	flex-grow: 1; 
+} 
+footer { 
+	color: white; 
+	padding: 1rem; 
+	text-align: center; 
+	
+}
+
+.container-content {
+	position: relative;
+    top: 30px;
+    padding-top: 0;
+}
+
+.bg-item {
+	font-weight: lighter;
+    font-size: 16pt;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0 30px;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+.max-w-fit {
+	max-width: fit-content;
+}
+.link-white {
+	color: #fff;
+}
+.render {
+	opacity: 1; 
+	transition: opacity .6s; 
+}
+
+.hide {
+	display: none !important;
+}
+.show {
+	display: block !important;
+}
+
+/*RESET*/
+.accordion-button:not(.collapsed) {
+	background-color: #f8f9fa;
+    /*border-bottom: 1px;*/
+    box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.btn-record-1, .btn-record-2 {
+	display: none;
+}
+.firstDisplay {
+	align-content: center;
+	/*position: relative;*/
+	/*top: -100px;*/
+}
+
+.rotate-left {
+	/*transform: matrix3d(1, 0, 0, 0.00005, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);*/
+	box-shadow: 0px 0px 20px 10px rgba(187, 238, 238, 0.175);
+}
+.rotate-right {
+	/*transform: matrix3d(1, 0, 0, -0.00005, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);*/
+	box-shadow: 0px 0px 20px 10px rgba(187, 238, 238, 0.975);
+}
+/* СТАТИСТИКА ---------------------------------------*/
+.myPhoto {
+	height: 456px;
+	width: 456px;
+	filter: grayscale(1);
+}
+/* УСЛУГИ -------------------------------------------*/
+	.services {
+		display: flex;
+	}
+	.service-card {
+		display: flex;
+		align-items: center;
+		font-size: 14pt;
+	    font-weight: lighter;
+	    text-align: center;
+	    /*box-shadow: 0px 5px 10px 0px rgb(10 11 12 / 60%);*/
+	    /*border: 1px solid #ddd; */
+	    /*border-radius: 10px;*/
+	    --bs-card-spacer-y: 1rem;
+	    --bs-card-spacer-x: 1rem;
+	    --bs-card-title-spacer-y: 0.5rem;
+	    /*background: repeating-linear-gradient(-45deg, #00d9ff1f 5px, #ffffff 10px 1px);*/
+	    /*background: repeating-linear-gradient(0deg, #bee 0px, #fff 230px 1px);*/
+	    /* transform: matrix3d(1, 0, 0, 0.0005, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);*/
+	}
+	.service-card:hover .service-body > .icon {
+	    filter: grayscale(0);
+	}
+	
+	.service-card:hover .list-group-item {
+		background-color: #fff;
+	}
+	.service-card:hover {
+	    /*background-color: floralwhite;*/
+	}
+
+	
+	.service-body {
+		display: flex;
+	    flex-direction: column;
+	}
+	.service-body > .icon {
+		margin: auto;
+		margin-top: 1rem;
+		height: 100px;
+		width: 100px;
+		border: 1px solid #e2e2e2;
+		border-radius: 50%;
+		box-shadow: 0px 0px 50px 10px rgba(187, 238, 238, 0.975);
+		text-align: center;
+		background-color: white;
+		filter: grayscale(0.6);
+	}
+	.service-body > span {
+		font-size: 12pt;
+	    font-weight: 900;
+	    text-align: center;
+	}
+
+/* МЕТОДИКИ -------------------------------------------*/
+	.study-card {
+		min-width: 260px;
+	}
+	.study-caption {
+		font-size: 12pt;
+		font-weight: 900;
+	}
+	.study-descrption {
+		font-size: 12pt;
+		font-weight: lighter;
+	}
+
+/* ОТЗЫВЫ ---------------------------------------------*/
+	.review {
+		width: 100%;
+		height: fit-content;
+	    border: 1px solid #eee;
+	    border-radius: 10px;
+	}
+    .review-body {
+    	display: flex;
+    	text-align: center;
+    }
+    .review-user > img {
+    	height: 100px;
+    	width: 100px;
+    	border-radius: 50%;
+    	text-align: center;
+    }
+    .review-user > small {
+    	font-size: 12pt;
+    	font-weight: lighter;
+    	text-align: center;
+    }
+    .review-text {
+    	height: fit-content;
+    	width: 100%;
+    	padding: 30px;
+    	text-align: left;
+    	font-size: 14pt;
+    	font-weight: lighter;
+    }
+    .review-caption {
+    	width: 100%;
+    	text-align: center;
+    	padding-bottom: 30px;
+    }
+/*-----------------------------------------------------*/
+
+.bg-white-transparent-10 {
+	background-color: rgb(255 255 255 / 10%);
+}
+.bg-white-transparent-20 {
+	background-color: rgb(255 255 255 / 20%);
+}
+.bg-white-transparent-30 {
+	background-color: rgb(255 255 255 / 30%);
+}
+.bg-white-transparent-40 {
+	background-color: rgb(255 255 255 / 40%);
+}
+.bg-white-transparent-50 {
+	background-color: rgb(255 255 255 / 50%);
+}
+.bg-white-transparent-60 {
+	background-color: rgb(255 255 255 / 60%);
+}
+.bg-white-transparent-70 {
+	background-color: rgb(255 255 255 / 70%);
+}
+.bg-white-transparent-80 {
+	background-color: rgb(255 255 255 / 80%);
+}
+.bg-white-transparent-90 {
+	background-color: rgb(255 255 255 / 90%);
+}
+
+.wrapper {
+	top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+}
+.header-lite {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    /*padding-right: 10px;*/
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border: 1px solid #dee2e6;
+    border-width: 1px 0px 1px 0px;
+}
+.header-fixed {
+    opacity: 1; /* Делаем заголовок видимым */
+    display: block;
+}
+.header-navbar {
+}
+.header-top, body, .hr-text:after {
+	background-color: white;
+}
+.header-top {
+	height: 32px;
+}
+
+.header-line {
+	height: 1px;
+    background: linear-gradient(to right, transparent, #55292b, transparent);
+}
+
+.container-body {
+	position: relative;
+	top: 140px;
+	z-index: 999;
+	margin-bottom: 180px;
+}
+
+/*.page-footer {*/
+/*  padding: 1rem;*/
+/*  background: #fff;*/
+/*  color: #000;*/
+/*  text-align: center;*/
+/*  height: fit-content;*/
+/*}*/
+/*.page-footer.fixed-bottom {*/
+/*  position: fixed;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  z-index: 10;*/
+/*}*/
+
+
+.modal {
+	background: rgb(0 0 0 / 40%);
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+	/*box-shadow: 0 0 0px 11px #ffffff1c;*/
+}
+.modal-shadow {
+	box-shadow: 0px 0rem 8rem 20px rgba(250, 158, 0, 0.90) !important;
+}
+.icon-link {
+	display: flex;
+    text-decoration: none;
+}
+.font-small {
+	font-size: .575em;
+}
+
+
+
+.gold-tooltip .tooltip-inner {
+    background-color: gold; /* Яркий, небесный синий */
+    color: #000; /* Абсолютно белый текст */
+}
+.gold-tooltip .tooltip-arrow::before {
+    border-top-color: #000; /* Направление стрелке указываем оформляем таким же цветом */
+}
+
+
+
+
+
+
+
+
+
+
+/* 0-576.98 ---------------------------------------------------------------------------------------------------------*/
+@media (min-width: 0px) and (max-width: 576.98px)  {
+    .container, .container-sm {
+        max-width: 480px;
+    }
+    .container-content {
+	    padding-top: 76px;
+	}
+    .header, .btn-record-2 {
+    	display: none;
+    }
+    .header-lite {
+    	opacity: 1;
+    	display: block;
+    }
+    .nav-item {
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: center;
+    }
+    .items-mobile {
+    	/*display: block;*/
+    }
+    .items-pc {
+    	display: none !important;
+    }
+
+	.text-body-emphasis {
+		text-align: center;
+	}
+	
+	.btn-record-1 {
+	display: block;
+	}
+	.firstDisplay {
+	align-content: center;
+	position: relative;
+	top: 0px;
+	}
+	.myPhoto {
+	height: 350px;
+	width: 350px;
+	}
+	
+	.biografy {
+		position: static;
+		padding-top: 19px;
+		padding-bottom: 19px;
+	}
+
+/* УСЛУГИ ---------------------------------------------*/
+	.services {
+		flex-direction: column;
+	}
+	.service-card {
+		flex-direction: row;
+	}
+
+/* ОТЗЫВЫ ---------------------------------------------*/
+	.review {
+		min-height: 495px;
+	}
+    .review-body {
+    	flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .review-user {
+    	padding-top: 30px;
+    }
+    .review-user > img {
+    	height: 100px;
+    	width: 100px;
+    	border-radius: 50%;
+    	text-align: center;
+    }
+    .review-user > small {
+    	font-size: 12pt;
+    	font-weight: lighter;
+    	text-align: center;
+    }
+    .review-text {
+    	align-content: center;
+    }
+/* ----------------------------------------------------*/
+
+    .icon {
+    	width: 50px;
+    	height: 50px;
+        border: 1px solid rgba(33, 37, 41, 0.75);
+        border-radius: 13px;
+    }
+    .icon-link-text {
+    	display: none;
+    }
+    /*.footer-socials, .footer-contacts {*/
+    /*	display: flex;*/
+    /*	flex-direction: row;*/
+    /*	justify-content: center;*/
+    /*}*/
+    .yamap {
+    	text-align: -webkit-center;
+    }
+    .icons-50, .icons-size {
+    	display: block;
+    	margin-right: 10px;
+    	height: 50px;
+		width: 50px;
+		background: url(../images/icons-social-50.png) no-repeat;
+    }
+    .icons-vk {
+		background-position: 0px 0px;
+    }
+    .icons-ok {
+		background-position: -150px -100px;
+    }
+    .icons-tg {
+		background-position: -100px 0px;
+    }
+    .icons-whatsapp {
+		background-position: -150px 0px;
+    }
+    .icons-mail {
+		background-position: -100px -50px;
+    }
+    .icons-phone {
+		background-position: -150px -150px;
+    }
+    .icons-youtube {
+		background-position: -250px -50px;
+    }
+    .icons-dzen {
+		background-position: -50px -150px;
+    }
+    
+    .link-pc {
+		display: none !important;
+	}
+	.link-mobile {
+		/*display: block !important;*/
+	}
+}
+
+/* 580-767.98 ---------------------------------------------------------------------------------------------------------*/
+@media (min-width: 580px) and (max-width: 767.98px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+    .header, .btn-record-2 {
+    	display: block;
+    }
+    .navbar-toggler, .btn-record-1 {
+        display: none;
+    }
+    .navbar-collapse {
+        display: flex;
+        flex-basis: auto;
+    }
+    .items-mobile {
+    	/*display: block !important;*/
+    }
+    .items-pc {
+    	display: none !important;
+    }
+    
+    	
+	.biografy {
+		position: relative;
+		/*top: -130px;*/
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+	}
+
+
+/* УСЛУГИ ---------------------------------------------*/
+	.services {
+		flex-direction: column;
+	}
+	.service-card {
+		flex-direction: row;
+	}
+
+/* ОТЗЫВЫ -----------------------------------------------*/
+	.review {
+		min-height: 295px;
+	}
+    .review-body {
+    	flex-direction: row;
+    }
+    .review-user {
+	    margin-left: 30px;
+	    align-content: center;
+	}
+	.review-text {
+		align-content: center;
+	}
+/* -------------------------------------------------------*/
+
+    .account {
+    	position: absolute;
+    	right: 0px;
+    	padding-right: 0;
+    }
+    .modal-dialog {
+    	width: max-content;
+    }
+    .icon {
+    	width: 50px;
+    	height: 50px;
+        border: 1px solid rgba(33, 37, 41, 0.75);
+        border-radius: 13px;
+    }
+    .icon-link {
+    	display: flex;
+    	text-decoration: none;
+    }
+    .icon-link-text {
+    	display: none;
+    }
+    /*.footer-socials, .footer-contacts {*/
+    /*	display: flex;*/
+    /*	flex-direction: row;*/
+    /*	justify-content: center;*/
+    /*}*/
+     .yamap {
+    	text-align: -webkit-center;
+    }
+    .icons-50, .icons-size {
+    	display: block;
+    	margin-right: 10px;
+    	height: 50px;
+		width: 50px;
+		background: url(../images/icons-social-50.png) no-repeat;
+    }
+    .icons-vk {
+		background-position: 0px 0px;
+    }
+    .icons-ok {
+		background-position: -150px -100px;
+    }
+    .icons-tg {
+		background-position: -100px 0px;
+    }
+    .icons-whatsapp {
+		background-position: -150px 0px;
+    }
+    .icons-mail {
+		background-position: -100px -50px;
+    }
+    .icons-phone {
+		background-position: -150px -150px;
+    }
+    .icons-youtube {
+		background-position: -250px -50px;
+    }
+    .icons-dzen {
+		background-position: -50px -150px;
+    }
+    
+    .link-pc {
+		/*display: block !important;*/
+	}
+	.link-mobile {
+		display: none !important;
+	}
+    
+    
+}
+
+/* 770-991.98 ---------------------------------------------------------------------------------------------------------*/
+@media (min-width: 770px) and (max-width: 991.98px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+    .header, .btn-record-2 {
+    	display: block;
+    }
+    .navbar-toggler, .btn-record-1 {
+        display: none;
+    }
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .items-mobile {
+    	display: none !important;
+    }
+    .items-pc {
+    	/*display: block !important;*/
+    }
+    
+    	
+	.biografy {
+		position: relative;
+		/*top: -130px;*/
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+	}
+
+
+/* УСЛУГИ ---------------------------------------------*/
+	.services {
+		flex-direction: row;
+	}
+	.service-card {
+		flex-direction: column;
+	}
+
+/* ОТЗЫВЫ -----------------------------------------------*/
+	.review {
+		min-height: 295px;
+	}
+    .review-body {
+    	flex-direction: row;
+    }
+    .review-user {
+	    margin-left: 30px;
+	    align-content: center;
+	}
+	.review-text {
+		align-content: center;
+	}
+/* -------------------------------------------------------*/
+
+    .account {
+    	position: absolute;
+    	right: 0px;
+    	padding-right: 0;
+    }
+    .modal-dialog {
+    	width: max-content;
+    }
+    /*.footer-socials, .footer-contacts {*/
+	   /* display: flex;*/
+	   /* flex-direction: column;*/
+    /*}*/
+    .icon-link {
+    	display: flex;
+    	text-decoration: none;
+    	padding-bottom: 5px;
+    }
+    .icon-link-text {
+    	display: block;
+    }
+    .icon {
+    	width: 25px;
+        text-align: center;
+        padding: 10px;
+    }
+    .icons-25, .icons-size {
+    	display: block;
+    	margin-right: 10px;
+    	height: 25px;
+		width: 25px;
+		background: url(../images/icons-social-25.png) no-repeat;
+    }
+    .icons-vk {
+		background-position: 0px 0px;
+    }
+    .icons-ok {
+		background-position: -75px -50px;
+    }
+    .icons-tg {
+		background-position: -50px 0px;
+    }
+    .icons-whatsapp {
+		background-position: -75px 0px;
+    }
+    .icons-mail {
+		background-position: -50px -25px;
+    }
+    .icons-phone {
+		background-position: -75px -75px;
+    }
+    .icons-youtube {
+		background-position: -125px -25px;
+    }
+    .icons-dzen {
+		background-position: -25px -75px;
+    }
+    
+    .link-pc {
+		/*display: block !important;*/
+	}
+	.link-mobile {
+		display: none !important;
+	}
+}
+
+/* 992-1199.98 ---------------------------------------------------------------------------------------------------------*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+    .header, .btn-record-2 {
+    	display: block;
+    }
+    .navbar-toggler, .btn-record-1 {
+        display: none;
+    }
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .items-mobile {
+    	display: none !important;
+    }
+    .items-pc {
+    	/*display: block !important;*/
+    }
+    
+    	
+	.biografy {
+		position: relative;
+		/*top: -130px;*/
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+	}
+
+
+/* УСЛУГИ -----------------------------------------------*/
+	.services {
+		flex-direction: row;
+	}
+	.service-card {
+		flex-direction: column;
+	}
+
+/* ОТЗЫВЫ -----------------------------------------------*/
+	.review {
+		min-height: 250px;
+	}
+    .review-body {
+    	flex-direction: row;
+    }
+    .review-user {
+	    margin-left: 30px;
+	    align-content: center;
+	}
+	.review-text {
+		align-content: center;
+	}
+/* -------------------------------------------------------*/
+
+    .account {
+    	position: absolute;
+    	right: 0px;
+    	padding-right: 0;
+    }
+    .modal-dialog {
+    	width: max-content;
+    }
+    /*.footer-socials, .footer-contacts {*/
+	   /* display: flex;*/
+	   /* flex-direction: column;*/
+    /*}*/
+    .icon-link {
+    	display: flex;
+    	text-decoration: none;
+    	padding-bottom: 5px;
+    }
+    .icon-link-text {
+    	display: block;
+    }
+    .icon {
+    	width: 25px;
+        text-align: center;
+    }
+    .icons-25, .icons-size {
+    	display: block;
+    	margin-right: 10px;
+    	height: 25px;
+		width: 25px;
+		background: url(../images/icons-social-25.png) no-repeat;
+    }
+    .icons-vk {
+		background-position: 0px 0px;
+    }
+    .icons-ok {
+		background-position: -75px -50px;
+    }
+    .icons-tg {
+		background-position: -50px 0px;
+    }
+    .icons-whatsapp {
+		background-position: -75px 0px;
+    }
+    .icons-mail {
+		background-position: -50px -25px;
+    }
+    .icons-phone {
+		background-position: -75px -75px;
+    }
+    .icons-youtube {
+		background-position: -125px -25px;
+    }
+    .icons-dzen {
+		background-position: -25px -75px;
+    }
+    
+    .link-pc {
+		/*display: block !important;*/
+	}
+	.link-mobile {
+		display: none !important;
+	}
+}
+
+/* >=1200px ------------------------------------------------------------------------------------*/
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 1200px;
+    }
+    .header, .btn-record-2 {
+    	display: block;
+    }
+    .navbar-toggler, .btn-record-1 {
+        display: none;
+    }
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .items-mobile {
+    	display: none !important;
+    }
+    .items-pc {
+    	/*display: block !important;*/
+    }
+    
+    	
+	.biografy {
+		position: relative;
+		/*top: -130px;*/
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+	}
+
+
+/* УСЛУГИ -----------------------------------------------*/
+	.services {
+		flex-direction: row;
+	}
+	.service-card {
+		flex-direction: column;
+	}
+
+/* ОТЗЫВЫ -----------------------------------------------*/
+	.review {
+		min-height: 195px;
+	}
+    .review-body {
+    	flex-direction: row;
+    }
+    .review-user {
+	    margin-left: 30px;
+	    align-content: center;
+	}
+	.review-text {
+		align-content: center;
+	}
+/* -------------------------------------------------------*/
+
+    .account {
+    	position: absolute;
+    	right: 0px;
+    	padding-right: 0;
+    }
+    .modal-dialog {
+    	width: max-content;
+    }
+    /*.footer-socials, .footer-contacts {*/
+	   /* display: flex;*/
+	   /* flex-direction: column;*/
+    /*}*/
+    .icon-link {
+    	display: flex;
+    	text-decoration: none;
+    	padding-bottom: 5px;
+    }
+    .icon-link-text {
+    	display: block;
+    }
+    .icon {
+    	width: 25px;
+        text-align: center;
+    }
+    .icons-25, .icons-size {
+    	display: block;
+    	margin-right: 10px;
+    	height: 25px;
+		width: 25px;
+		background: url(../images/icons-social-25.png) no-repeat;
+    }
+    .icons-vk {
+		background-position: 0px 0px;
+    }
+    .icons-ok {
+		background-position: -75px -50px;
+    }
+    .icons-tg {
+		background-position: -50px 0px;
+    }
+    .icons-whatsapp {
+		background-position: -75px 0px;
+    }
+    .icons-mail {
+		background-position: -50px -25px;
+    }
+    .icons-phone {
+		background-position: -75px -75px;
+    }
+    .icons-youtube {
+		background-position: -125px -25px;
+    }
+    .icons-dzen {
+		background-position: -25px -75px;
+    }
+    
+    .link-pc {
+		/*display: block !important;*/
+	}
+	.link-mobile {
+		display: none !important;
+	}
+}
+
+.icons-size {
+	filter: grayscale(100%);
+	opacity: 0.5;
+}
+
+a:link >.icon-link-text, a:active >.icon-link-text, a:visited >.icon-link-text {
+	color: grey;
+}
+a:hover >.icon-link-text {
+	color: red;
+}
+
+.hr-text {
+	line-height: 1em;
+	position: relative;
+	outline: 0;
+	border: 0;
+	color: black;
+	text-align: center;
+	height: 1.5em;
+	opacity: 0.7;
+}
+.hr-text:before {
+	content: '';
+	background: linear-gradient(to right, transparent, #000000, transparent);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+}
+.hr-text:after {
+	content: attr(data-content);
+	position: relative;
+	display: inline-block;
+	color: black;
+	padding: 0 .5em;
+	line-height: 1.5em;
+}
+
+
+
